@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+  
+    <div class="portfolio">
+    
+      <div class="portfolio-text">
+    
+        <h1>Bienvenido</h1>
+        <h3>
+          En este pequeño espacio te muestro mis trabajos como desarrollador
+          backend como también las herramientas utilizadas.
+          Espero apoyes esta iniciativa con un feedback
+        </h3>
+    
+      </div>
+
+      <div class="portfolio-image">
+        <img src="{% static 'img/Screenshot_66.png' %}" alt="Imagen descriptiva" />
+      </div>
+
+    </div>
+
+{% endblock %}
+

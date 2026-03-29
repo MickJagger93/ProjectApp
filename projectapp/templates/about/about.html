@@ -1,0 +1,121 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+
+    <div class="intro animate-slide-up animate-delay-1">
+        
+        <h2>
+            Hola, mi nombre es Miguel y soy
+            Desarrollador backend y front
+        </h2>
+
+    </div>
+
+    <div class="services animate-slide-up animate-delay-2">
+
+        <div class="backend">
+            <h3>
+                Desarrollo backend
+            </h3>
+            <hr>
+            <p>
+                Python:
+                -Flask
+                -Django
+            </p>
+        </div>
+
+        <div class="front">
+            <h3>
+                Desarrollo front
+            </h3>
+            <hr>
+            <p>
+                JavaScript:
+                -DOM
+            </p>
+        </div>
+
+        <div class="database">
+            <h3>
+                Bases de datos
+            </h3>
+            <hr>
+            <p>
+                -Postgres
+                -SQLite3
+            </p>
+        </div>
+
+        <div class="tools">
+            <h3>
+                Herramientas en la nube
+            </h3>
+            <hr>
+            <p>
+                -GitHub
+                -Railway
+                -Supabase
+            </p>
+        </div>
+
+    </div>
+
+    <div class="about-me animate-slide-up animate-delay-3">
+
+        <h3>Experiencia:</h3>
+        
+        <p class="description">
+            Soy desarrollador backend con 2 años de experiencia en el sector. Tambien me dedico a realizar trabajos en Frontend con JavaScript y diseño con CSS.
+            
+            Actualmente me encuentro en proceso de aprendizaje en otras tecnologias para mejorar mi stack.
+
+            En la seccion de 'My Projects' podras visulizar los trabajos que he realizado.
+        </p>
+    
+    </div>
+
+    <div class="contact animate-slide-up animate-delay-3">
+        
+        <footer>
+
+            <div class="media">
+                
+                <h3>
+                    Redes sociales:
+                </h3>
+                
+                <div class="social-item">
+                    <img src="{% static 'icons/facebook.png' %}" alt="Facebook" class="social-icon" />
+                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank" rel="noopener" class="social-link">Facebook</a>
+                </div>
+
+                <div class="social-item">
+                    <img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn" class="social-icon" />
+                    <a href="https://www.linkedin.com/in/miguel-quevedo-47243b236/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+                </div>
+            
+            </div>
+
+            <div class="wsp">
+                
+                <h3>
+                    Numero de contacto:
+                </h3>
+
+                <div class="contact-item">
+                    <a href="https://wa.me/+584128994992" class="contact-link">Whatsapp</a>
+                    <img src="{% static 'icons/logo.png' %}" alt="Teléfono" class="social-icon" />
+                </div>
+            
+            </div>
+
+        </footer>
+    
+    </div>
+
+{% endblock %}

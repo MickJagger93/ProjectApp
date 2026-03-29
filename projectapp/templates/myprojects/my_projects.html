@@ -1,0 +1,59 @@
+{% extends 'layout/base.html' %}
+
+{% block title %} My projects {% endblock %}
+
+{% block content %} 
+
+    <h1>Projects</h1>
+    
+    <div class="projects-grid animate-slide-up">
+    
+        {% for project in projects %}
+    
+            <div class="card"
+        
+                data-description-es="{{ project.description_es|escape }}"
+                data-description-en="{{ project.description_en|escape }}"
+                data-images='[{% for img in project.images.all %}"{{ img.image.url }}"{% if not forloop.last %}, {% endif %}{% endfor %}]'
+                data-github="{{ project.github_link|default:'' }}"
+                data-deploy="{{ project.deploy_link|default:'' }}">
+                <img src="{{ project.image.url }}" alt="{{ project.name }}">
+            
+                <div class="project-name">{{ project.name }}</div>
+            
+                <div class="status {% if project.status == 'dev' %}dev{% else %}done{% endif %}">
+                    {{ project.get_status_display }}
+                </div>
+            
+            </div>
+        
+        {% empty %}
+            <p>There is not projects to show.</p>
+        {% endfor %}
+    
+    </div>
+
+    <div id="projectModal" class="modal">
+        
+        <div class="modal-content">
+    
+            <div id="languageSelector">
+                <button data-lang="es" class="active">ES</button>
+                <button data-lang="en">EN</button>
+            </div>
+            
+            <span class="close">&times;</span>
+            <h2 id="modalProjectName"></h2>
+            <p id="modalProjectDescription"></p>
+            <div class="carousel-container" id="modalCarousel"></div>
+    
+            <div class="modal-links">
+                <a id="modalGithubLink" href="#" target="_blank">View GitHub</a>
+                <a id="modalDeployLink" href="#" target="_blank">View Deploy</a>
+            </div>
+
+        </div>
+    
+    </div>
+
+{% endblock %}
