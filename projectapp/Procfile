@@ -1,1 +1,1 @@
-web: gunicorn projectapp.wsgi
+web: sh -c "cd projectapp && gunicorn projectapp.wsgi --bind 0.0.0.0:$PORT"
