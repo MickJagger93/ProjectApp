@@ -1,3 +1,0 @@
-python manage.py migrate 
-python manage.py collectstatic --noinput 
-gunicorn projectapp.projectapp.wsgi --bind 0.0.0.0:$PORT
