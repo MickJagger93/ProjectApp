@@ -1,5 +1,5 @@
 #!/bin/bash
-env\Scripts\activate
+source env/bin/activate
 cd projectapp
 python manage.py migrate
 python manage.py collectstatic --noinput
