@@ -142,3 +142,7 @@ os.makedirs(MEDIA_ROOT, exist_ok=True)
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+media_dir = '/app/projectapp/media/projects_images'
+if not os.path.exists(media_dir):
+    os.makedirs(media_dir)
