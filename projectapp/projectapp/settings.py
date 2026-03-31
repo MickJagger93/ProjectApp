@@ -29,7 +29,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['projectapp-production-807e.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = [
-    'projectapp-production-807e.up.railway.app',
+    'https://projectapp-production-807e.up.railway.app',
 ]
 
 # Application definition
