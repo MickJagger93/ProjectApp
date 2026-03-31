@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'projectapp.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://postgres:admin93@127.0.0.1:5432/myprojects'
+        default='DATABASE_URL'
     )
 }
 
