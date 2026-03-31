@@ -79,9 +79,15 @@ WSGI_APPLICATION = 'projectapp.wsgi.application'
 
 
 DATABASES = {
-
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'CxscStkqBfkOpPMLdeKrKlQZSLJTzghm',
+        'HOST': 'mainline.proxy.rlwy.net',
+        'PORT': '33308',
+    }
 }
-
 
 
 # Password validation
