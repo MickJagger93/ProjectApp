@@ -26,10 +26,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-#&0(=ml)zep96%lo+=4uw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['https://projectapp-production-807e.up.railway.app']
+ALLOWED_HOSTS = ['projectapp-production-807e.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://projectapp-production-807e.up.railway.app',
+    'projectapp-production-807e.up.railway.app',
 ]
 
 # Application definition
