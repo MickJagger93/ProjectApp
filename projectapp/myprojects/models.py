@@ -21,7 +21,7 @@ class Project(models.Model):
 
 class ProjectImage(models.Model):
     project = models.ForeignKey(Project, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='project_images/')
+    image = CloudinaryField('image')
     alt_text = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
