@@ -42,7 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myprojects',
+    'cloudinary_storage',
+    'cloudinary'
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -113,6 +121,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Use cloudinary to media files
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
@@ -126,10 +136,10 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'staticfiles'))
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/app/projectapp/media'
+#MEDIA_ROOT = '/app/projectapp/media'
 
 # Ensure media directory exists
-os.makedirs(MEDIA_ROOT, exist_ok=True)
+#os.makedirs(MEDIA_ROOT, exist_ok=True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
