@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myprojects',
-    'cloudinary',
-    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -81,14 +79,7 @@ WSGI_APPLICATION = 'projectapp.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'CxscStkqBfkOpPMLdeKrKlQZSLJTzghm',
-        'HOST': 'mainline.proxy.rlwy.net',
-        'PORT': '33308',
-    }
+    'default': dj_database_url.config()
 }
 
 
@@ -134,13 +125,11 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'staticfiles'))
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 MEDIA_URL = '/media/'
-#MEDIA_ROOT = '/app/projectapp/media'
+MEDIA_ROOT = '/app/projectapp/media'
 
 # Ensure media directory exists
-#os.makedirs(MEDIA_ROOT, exist_ok=True)
+os.makedirs(MEDIA_ROOT, exist_ok=True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
