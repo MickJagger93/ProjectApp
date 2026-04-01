@@ -1,3 +1,4 @@
 project_images/
 projects_images/
 staticfiles/
+db.sqlite3
