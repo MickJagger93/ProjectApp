@@ -89,7 +89,9 @@ WSGI_APPLICATION = 'projectapp.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    'default': dj_database_url.parse(
+        'postgresql://postgres:CxscStkqBfkOpPMLdeKrKlQZSLJTzghm@mainline.proxy.rlwy.net:33308/railway'
+    )
 }
 
 # Password validation
