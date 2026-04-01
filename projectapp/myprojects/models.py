@@ -1,4 +1,4 @@
-
+from cloudinary.models import CloudinaryField
 from django.db import models
 
 class Project(models.Model):
@@ -8,7 +8,7 @@ class Project(models.Model):
     ]
 
     name = models.CharField(max_length=200)
-    image = models.ImageField('image')
+    image = CloudinaryField('image')
     description_es = models.TextField(verbose_name='Spanish description', default='Translated text')
     description_en = models.TextField(verbose_name='English description', default='Translated text')
     github_link = models.URLField(blank=True, null=True)
